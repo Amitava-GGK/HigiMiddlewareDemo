@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HigiMiddleware", "HigiMiddleware\HigiMiddleware.csproj", "{DA36F6FB-07D6-45C3-A84C-BF675A267E3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HigiMiddlewareWebjob", "HigiMiddlewareWebjob\HigiMiddlewareWebjob.csproj", "{5888F6AB-E181-4E73-8BE5-98A1691CD087}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HigiMiddlewareModels", "HigiMiddlewareModels\HigiMiddlewareModels.csproj", "{CAF8E77E-D6DC-4227-9C6D-3CC2B6F3E3B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HigiWeb", "HigiWeb\HigiWeb.csproj", "{97032F15-72C2-4208-83AB-A608789BD1E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA36F6FB-07D6-45C3-A84C-BF675A267E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA36F6FB-07D6-45C3-A84C-BF675A267E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA36F6FB-07D6-45C3-A84C-BF675A267E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA36F6FB-07D6-45C3-A84C-BF675A267E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5888F6AB-E181-4E73-8BE5-98A1691CD087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5888F6AB-E181-4E73-8BE5-98A1691CD087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5888F6AB-E181-4E73-8BE5-98A1691CD087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5888F6AB-E181-4E73-8BE5-98A1691CD087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAF8E77E-D6DC-4227-9C6D-3CC2B6F3E3B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF8E77E-D6DC-4227-9C6D-3CC2B6F3E3B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAF8E77E-D6DC-4227-9C6D-3CC2B6F3E3B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAF8E77E-D6DC-4227-9C6D-3CC2B6F3E3B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97032F15-72C2-4208-83AB-A608789BD1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97032F15-72C2-4208-83AB-A608789BD1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97032F15-72C2-4208-83AB-A608789BD1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97032F15-72C2-4208-83AB-A608789BD1E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
