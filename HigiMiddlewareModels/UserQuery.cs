@@ -8,5 +8,7 @@ namespace HigiMiddlewareModels
     public class UserQuery
     {
         public string Region { get; set; }
+
+        public string JobID { get; set; }
     }
 }

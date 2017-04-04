@@ -24,7 +24,7 @@
     <div class="container">
 
         <div class="page-header">
-            <h1>Higi Demo</h1>
+            <h1>Azure Demo</h1>
         </div>
 
         <form class="form-inline" novalidate id="fetch-user-form">
@@ -35,14 +35,19 @@
                     <input type="text" class="form-control" id="region-field" placeholder="Enter region. Ex. india/china">
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Fetch User</button>
+            <button type="submit" class="btn btn-success">Process message</button>
+            <button type="button" class="btn btn-danger" id="btn-clear-messages">Clear message</button>
         </form>
+
+        <div id="message-list">
+
+        </div>
 
     </div>
 
-    <script src="https://unpkg.com/jquery@3.2.1"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="~/Scripts/jquery-1.6.4.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.1.min.js"></script>
+    <script src="~/signalr/hubs"></script>
     <script src="~/js/home.js"></script>
 </body>
 </html>

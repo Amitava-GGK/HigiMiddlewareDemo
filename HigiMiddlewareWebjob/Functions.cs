@@ -8,6 +8,7 @@ using Microsoft.Azure.WebJobs;
 using HigiMiddlewareModels;
 using Newtonsoft.Json;
 using System.Net.Http;
+using System.Configuration;
 
 namespace HigiMiddlewareWebjob
 {
@@ -33,6 +34,11 @@ namespace HigiMiddlewareWebjob
                 apiEndpint.Append(string.Format("?region={0}", query.Region));
             }
 
+            JobNotification jobNotification = new JobNotification
+            {
+                JobID = query.JobID
+            };
+
             HttpResponseMessage response = await httpClient.GetAsync(apiEndpint.ToString());
 
             if (response.IsSuccessStatusCode)
@@ -47,12 +53,35 @@ namespace HigiMiddlewareWebjob
                 {
                     Console.WriteLine("Exception occured while reading the response content.\r\n {0}", ex);
                 }
-
+                
                 Console.WriteLine("Received random user. \r\n {0}", JsonConvert.SerializeObject(data));
+                
+                jobNotification.JobStatus = "success";
+                jobNotification.User = data;
+                
             }
             else
             {
                 Console.WriteLine("Failed to fetch data from api");
+                jobNotification.JobStatus = "Failed";
+            }
+
+            var content = new StringContent(
+                JsonConvert.SerializeObject(jobNotification), 
+                Encoding.UTF8, 
+                "application/json");
+
+            string notificationEndpoint = ConfigurationManager.AppSettings["JobNotoficationEndPoint"];
+
+            response =  await httpClient.PostAsync(notificationEndpoint, content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("Successfully called notification endpoint.");
+            }
+            else
+            {
+                Console.WriteLine("Failed to call notification endpoint.");
             }
         }
     }
